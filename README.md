@@ -10,6 +10,7 @@ demand specific input parameters for each task. To optimize resource utilization
 As the lead engineer you have the liberty to design the communication protocol between the driver and the executor with the following requirements:
 
 * An executor is a server process that continously exchanges messages with the driver.
+* A driver that communicates with the executor on tasks that need to be performed.
 * Executor and driver communicate over STDIN and STDOUT channels for simplicity.
 * An executor should have a maximum amount of tasks it can execute concurrently.
 * Each task carries a unique identifier, the task type, and input parameters, depending on the type of task.
