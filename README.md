@@ -4,11 +4,12 @@
 
 Your objective is to create a concurrent task executor that interfaces with a driver for task execution. The executor and driver continously exchange messages 
 according to a to-be-developed protocol with the goal to get tasks communicated from the driver to the executor. You can assume the driver is a server
-process running on a different machine, scheduling tasks on many executors. The tasks sent to the executor will vary across  a spectrum of business cases and 
+process running on a different machine, scheduling tasks on many executors. The tasks sent to the executor will vary across a spectrum of business cases and 
 demand specific input parameters for each task. To optimize resource utilization, the executor must have the capability to execute multiple tasks simultaneously.
 
 As the lead engineer you have the liberty to design the communication protocol between the driver and the executor with the following requirements:
 
+* An executor is a server process that continously exchanges messages with the driver.
 * Executor and driver communicate over STDIN and STDOUT channels for simplicity.
 * An executor should have a maximum amount of tasks it can execute concurrently.
 * Each task carries a unique identifier, the task type, and input parameters, depending on the type of task.
